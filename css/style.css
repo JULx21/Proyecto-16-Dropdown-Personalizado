@@ -1,0 +1,68 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+}
+
+.dropdown {
+  width: 250px;
+}
+
+/* Botón principal (estado predeterminado) */
+.dropdown-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  font-size: 18px;
+  background: white;
+  border: 2px solid #222;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Lista de opciones (oculta por defecto) */
+.dropdown-list {
+  display: none;
+  list-style: none;
+  margin: 6px 0 0 0;
+  padding: 0;
+  border: 2px solid #222;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* Estado abierto */
+.dropdown-list.open {
+  display: block;
+}
+
+.dropdown-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  font-size: 18px;
+  border-bottom: 1px solid #222;
+  cursor: pointer;
+}
+
+.dropdown-list li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-list li:hover {
+  background: #eee;
+}
+
+/* Elemento seleccionado resaltado con un check */
+.dropdown-list li.selected {
+  background: #ddd;
+  font-weight: bold;
+}
+
+.dropdown-list li.selected::after {
+  content: "✔";
+}
